@@ -3,3 +3,9 @@
     margin: auto;
     margin-top: 2rem;
 }
+
+@media (max-width: 900px) {
+    .receive-gift-container {
+        width: auto;
+    }
+}
