@@ -1,6 +1,44 @@
 <div class="gift-container">
     <mat-card>
-        <img mat-card-image src="assets/2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>Test</mat-card-content>
+        <mat-stepper labelPosition="bottom" #stepper>
+            <mat-step>
+                <img mat-card-image src="assets/2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>Поздравление для лучшей девушки, для самой, самой, лучшей =)</mat-card-content>
+                <div class="flex right">
+                    <button mat-button matStepperNext>Вперед</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <img mat-card-image src="assets/step2.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>Не бойся мечтать, мечты сбываются, стоит приложить к ним немножко усилий и у тебя все получится. Я в тебя верю =)</mat-card-content>
+                <div class="flex between">
+                    <button mat-button matStepperPrevious>Назад</button>
+                    <button mat-button matStepperNext>Вперед</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <img mat-card-image src="assets/step3.jpeg" alt="Photo of a Shiba Inu">
+                <mat-card-content>Не бойся делать выбор, нет ни чего хуже, чем застрять на месте.</mat-card-content>
+                <div class="flex between">
+                    <button mat-button matStepperPrevious>Назад</button>
+                    <button mat-button matStepperNext>Вперед</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <img mat-card-image src="assets/setp4.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>Всегда что бы бло с кем посмотреть фильм и попить горячее кокао или холодное пиво =)</mat-card-content>
+                <div class="flex between">
+                    <button mat-button matStepperPrevious>Назад</button>
+                    <button mat-button matStepperNext>Вперед</button>
+                </div>
+            </mat-step>
+            <mat-step>
+                <img mat-card-image src="assets/step5.jpg" alt="Photo of a Shiba Inu">
+                <mat-card-content>Да и не угаснет интерес к этой жизни, будь немножечко иследователем тайн этого мира, с восторгом смотри в каждый новый день, ведь не знаешь какая минута будет последней =)</mat-card-content>
+                <div>
+                    <button mat-button matStepperPrevious>Назад</button>
+                </div>
+            </mat-step>
+          </mat-stepper>
     </mat-card>
 </div>

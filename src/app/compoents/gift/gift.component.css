@@ -3,3 +3,14 @@
     margin: auto;
     margin-top: 2rem;
 }
+
+.flex {
+    display: flex;
+}
+.between {
+    justify-content: space-between;
+}
+
+.right {
+    justify-content: end;
+}

@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatStepperModule } from '@angular/material/stepper';
 
 import { NavbarComponent } from './compoents/navbar/navbar.component';
 import { ReceiveGiftComponent } from './compoents/receive-gift/receive-gift.component';
@@ -44,7 +45,8 @@ import { MessageComponent } from './compoents/message/message.component';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
