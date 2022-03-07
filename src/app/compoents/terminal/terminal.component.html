@@ -5,6 +5,15 @@
         {{message}}
     </p>
     <div *ngIf="isRunScript">
-        <app-script-search-gift></app-script-search-gift>
+        <app-script-search-gift (stopScript)="onStropScript()"></app-script-search-gift>
     </div>
+    <p class="terminal-text" *ngIf="isStropScript">
+        <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:
+        <span style="color: blue;">~/Documents/angular/marth-height$</span>
+    </p>
+    <p class="terminal-text" *ngIf="isStropScript">
+        <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:
+        <span style="color: blue;">~/Documents/angular/marth-height$</span>
+        exit
+    </p>
 </div>

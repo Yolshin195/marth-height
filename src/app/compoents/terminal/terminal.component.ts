@@ -11,6 +11,7 @@ export class TerminalComponent implements OnInit, AfterViewChecked {
   @ViewChild('terminal') private terminalRef?: ElementRef;
 
   public isRunScript: boolean = false;
+  public isStropScript: boolean = false;
   public messagesStepsRunScript: string[] = [];
   public stepsRunScript: string[] = [
     "scp yolshin195@10.34.15.32 --port 22 --path '/home/yolshin/Document/searchGift.sh' .",
@@ -36,8 +37,6 @@ export class TerminalComponent implements OnInit, AfterViewChecked {
     };
 
     f();
-
-    //setTimeout(() => {this.router.navigateByUrl("/search/complite")}, 15000);
   }
 
   ngAfterViewChecked() {        
@@ -51,6 +50,11 @@ export class TerminalComponent implements OnInit, AfterViewChecked {
           this.terminalRef.nativeElement.scrollTop = this.terminalRef.nativeElement.scrollHeight;
         }
     } catch(err) { }                 
-}
+  }
+
+  onStropScript() {
+    this.isStropScript = true;
+    setTimeout(() => {this.router.navigateByUrl("/search/complite")}, 2000);
+  }
 
 }

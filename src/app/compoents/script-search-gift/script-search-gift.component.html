@@ -10,8 +10,18 @@
     <p>Так что лучше не мешать и спокойно дождаться завершения=)</p>
 </div>
 
-<p *ngFor="let message of messages">
-    > {{message}}
-</p>
 
-<app-setd-message [steps]="6789"></app-setd-message>
+<app-message *ngFor="let message of messagesTelegram" [message]="message"></app-message>
+
+<div *ngIf="isMessageTelegramShow">
+    <app-setd-message [steps]="12789" (stop)="onStopSendTelegramMessage()"></app-setd-message>
+</div>
+
+<app-message *ngFor="let message of messagesWhatsApp" [message]="message.message" [messageDone]="message.messageDone" [messageDoneColor]="message.messageDoneColor" [isShowDone]="message.isShowDone"></app-message>
+<div *ngIf="isMessageWhatsAppShow">
+    <app-setd-message [steps]="7890" (stop)="onStopSendWhatsAppMessage()"></app-setd-message>
+</div>
+
+<app-message *ngFor="let message of messagesVK" [message]="message.message" [messageDone]="message.messageDone" [messageDoneColor]="message.messageDoneColor" [isShowDone]="message.isShowDone"></app-message>
+
+<p *ngIf="isMessageVKShow">> Выход ...</p>

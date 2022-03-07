@@ -20,6 +20,7 @@ import { SetdMessageComponent } from './compoents/setd-message/setd-message.comp
 import { GiftComponent } from './compoents/gift/gift.component';
 import { ScriptSearchGiftComponent } from './compoents/script-search-gift/script-search-gift.component';
 import { SearchCompliteComponent } from './compoents/search-complite/search-complite.component';
+import { MessageComponent } from './compoents/message/message.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SearchCompliteComponent } from './compoents/search-complite/search-comp
     SetdMessageComponent,
     GiftComponent,
     ScriptSearchGiftComponent,
-    SearchCompliteComponent
+    SearchCompliteComponent,
+    MessageComponent   
   ],
   imports: [
     BrowserModule,
