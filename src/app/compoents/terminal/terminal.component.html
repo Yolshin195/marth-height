@@ -1,3 +1,8 @@
 <div class="terminal-container">
-    
+    <p class="terminal-text" *ngFor="let message of messages">
+        <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:
+        <span style="color: blue;">~/Documents/angular/marth-height$</span>
+        {{message}}
+    </p>
+    <app-setd-message [steps]="6789"></app-setd-message>
 </div>

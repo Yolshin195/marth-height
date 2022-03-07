@@ -16,6 +16,10 @@ import { ReceiveGiftComponent } from './compoents/receive-gift/receive-gift.comp
 import { ErrorReceivingGiftDialogComponent } from './compoents/error-receiving-gift-dialog/error-receiving-gift-dialog.component';
 import { GiftSearchComponent } from './compoents/gift-search/gift-search.component';
 import { TerminalComponent } from './compoents/terminal/terminal.component';
+import { SetdMessageComponent } from './compoents/setd-message/setd-message.component';
+import { GiftComponent } from './compoents/gift/gift.component';
+import { ScriptSearchGiftComponent } from './compoents/script-search-gift/script-search-gift.component';
+import { SearchCompliteComponent } from './compoents/search-complite/search-complite.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { TerminalComponent } from './compoents/terminal/terminal.component';
     ReceiveGiftComponent,
     ErrorReceivingGiftDialogComponent,
     GiftSearchComponent,
-    TerminalComponent
+    TerminalComponent,
+    SetdMessageComponent,
+    GiftComponent,
+    ScriptSearchGiftComponent,
+    SearchCompliteComponent
   ],
   imports: [
     BrowserModule,
