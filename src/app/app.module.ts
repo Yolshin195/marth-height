@@ -3,16 +3,38 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+
+import { NavbarComponent } from './compoents/navbar/navbar.component';
+import { ReceiveGiftComponent } from './compoents/receive-gift/receive-gift.component';
+import { ErrorReceivingGiftDialogComponent } from './compoents/error-receiving-gift-dialog/error-receiving-gift-dialog.component';
+import { GiftSearchComponent } from './compoents/gift-search/gift-search.component';
+import { TerminalComponent } from './compoents/terminal/terminal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    ReceiveGiftComponent,
+    ErrorReceivingGiftDialogComponent,
+    GiftSearchComponent,
+    TerminalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

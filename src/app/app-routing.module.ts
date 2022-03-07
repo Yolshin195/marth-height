@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GiftSearchComponent } from './compoents/gift-search/gift-search.component';
+import { ReceiveGiftComponent } from './compoents/receive-gift/receive-gift.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', component: ReceiveGiftComponent},
+  {path: 'search', component: GiftSearchComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

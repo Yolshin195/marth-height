@@ -1,0 +1,9 @@
+.receive-gift-container {
+    width: 80vh;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.example-card {
+    max-width: 400px;
+  }
