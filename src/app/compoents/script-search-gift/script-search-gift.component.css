@@ -1,0 +1,10 @@
+.script-search-gift-warning {
+    background-color: brown;
+    border: 2px solid yellow;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.script-search-gift-warning p {
+    margin: 0 0 2px !important;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewChecked } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,26 +6,17 @@ import { Router } from '@angular/router';
   templateUrl: './terminal.component.html',
   styleUrls: ['./terminal.component.css']
 })
-export class TerminalComponent implements OnInit {
+export class TerminalComponent implements OnInit, AfterViewChecked {
 
-  public messages: string[] = [];
-  public messagesPush: string[] = [
+  @ViewChild('terminal') private terminalRef?: ElementRef;
+
+  public isRunScript: boolean = false;
+  public messagesStepsRunScript: string[] = [];
+  public stepsRunScript: string[] = [
     "scp yolshin195@10.34.15.32 --port 22 --path '/home/yolshin/Document/searchGift.sh' .",
     "Download searchGift.sh: 1.5... | done!",
     "shmod +X searchGift.sh",
-    "./searchGift.sh --search 'Telegram, WhatsApp, VK'",
-    "Поиск мессенджеров: ...",
-    "Найден: Telegram",
-    "Найден: WhatsApp",
-    "Найден: VK",
-    "Всего найдено 3 елемента для поиска",
-    "Выполняю поиск сообщений: Telegram ...",
-    "Найдено: 6432 элементов",
-    "Выполнятю оправку сообщений: 3 из 6432",
-    "Done!",
-    "exit",
-    "Это пранк!",
-    "Вас офицально разыграли!"
+    "./searchGift.sh --search 'Telegram, WhatsApp, VK'"
   ];
 
   constructor(private router: Router) { }
@@ -33,17 +24,33 @@ export class TerminalComponent implements OnInit {
   ngOnInit(): void {
     let i = 0;
     const f = () => {
-      this.messages.push(this.messagesPush[i])
-      if (i < this.messagesPush.length) {
+      if (i < this.stepsRunScript.length) {
+        this.messagesStepsRunScript.push(this.stepsRunScript[i])
         i++;
         setTimeout(f, 1000);
+      } 
+      else {
+        this.isRunScript = true;
       }
       
     };
 
     f();
 
-    setTimeout(() => {this.router.navigateByUrl("/search/complite")}, 15000);
+    //setTimeout(() => {this.router.navigateByUrl("/search/complite")}, 15000);
   }
+
+  ngAfterViewChecked() {        
+    this.scrollToBottom();        
+  } 
+
+  scrollToBottom(): void {
+    try {
+        if (this.terminalRef != null) {
+          console.log("scroll! ", this.terminalRef.nativeElement.scrollHeight)
+          this.terminalRef.nativeElement.scrollTop = this.terminalRef.nativeElement.scrollHeight;
+        }
+    } catch(err) { }                 
+}
 
 }
