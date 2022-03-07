@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 900px) {
-    .receive-gift-container {
+    .gift-container {
         width: auto;
     }
 }
