@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,9 +6,10 @@ import { Router } from '@angular/router';
   templateUrl: './search-complite.component.html',
   styleUrls: ['./search-complite.component.css']
 })
-export class SearchCompliteComponent implements OnInit {
+export class SearchCompliteComponent implements OnInit, OnDestroy {
 
   public wait: number = 10;
+  private timeoutRef: any;
 
   constructor(private router: Router) { }
 
@@ -16,13 +17,17 @@ export class SearchCompliteComponent implements OnInit {
     const worker = () => {
       if (this.wait > 0) {
         this.wait--;
-        setTimeout(worker, 1000);
+        this.timeoutRef = setTimeout(worker, 1000);
       } else {
         this.router.navigateByUrl("/gift");
       }
     }
 
     worker();
+  }
+
+  ngOnDestroy() { 
+    clearTimeout(this.timeoutRef);
   }
 
 }
