@@ -5,7 +5,7 @@
         sudo su root
     </p>
     <p class="terminal-text" *ngFor="let message of messagesStepsRunScript">
-        <span style="color:chartreuse;">root@android</span>:
+        <span style="color:rgb(224, 17, 17);">root@android</span>:
         <span style="color: blue;">~/home$</span>
         {{message}}
     </p>
@@ -13,8 +13,13 @@
         <app-script-search-gift (stopScript)="onStropScript()"></app-script-search-gift>
     </div>
     <p class="terminal-text" *ngIf="isStropScript">
-        <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:
+        <span style="color:rgb(224, 17, 17);">root@android</span>:
         <span style="color: blue;">~/home$</span>
+    </p>
+    <p class="terminal-text" *ngIf="isStropScript">
+        <span style="color:rgb(224, 17, 17);">root@android</span>:
+        <span style="color: blue;">~/home$</span>
+        exit
     </p>
     <p class="terminal-text" *ngIf="isStropScript">
         <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:

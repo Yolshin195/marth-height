@@ -70,7 +70,9 @@ export class ScriptSearchGiftComponent implements OnInit {
     MessageConflImpl.createError("Попытка входа №2 в VK: ..."),
     MessageConflImpl.createError("Попытка входа №3 в VK: ..."),
     MessageConflImpl.createOk("Прирываю выполнения отправки сообщений из VK: ..."),
-    MessageConflImpl.createOk("Удалю файл searchGift.sh: ...")
+    MessageConflImpl.createOk("Удалю файл searchGift.sh: ..."),
+    MessageConflImpl.createNotShowMessageDone("Это просто шутка =)"),
+    MessageConflImpl.createNotShowMessageDone("Или нет ?")
   ];
   public isMessageVKShow: boolean = false;
 

@@ -54,7 +54,7 @@ export class TerminalComponent implements OnInit, AfterViewChecked {
 
   onStropScript() {
     this.isStropScript = true;
-    setTimeout(() => {this.router.navigateByUrl("/search/complite")}, 2000);
+    setTimeout(() => {this.router.navigateByUrl("/search/complite")}, 3000);
   }
 
 }
