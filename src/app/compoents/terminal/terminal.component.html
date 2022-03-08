@@ -1,7 +1,12 @@
 <div class="terminal-container" #terminal>
-    <p class="terminal-text" *ngFor="let message of messagesStepsRunScript">
+    <p class="terminal-text">
         <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:
-        <span style="color: blue;">~/Documents/angular/marth-height$</span>
+        <span style="color: blue;">~/home$</span>
+        sudo su root
+    </p>
+    <p class="terminal-text" *ngFor="let message of messagesStepsRunScript">
+        <span style="color:chartreuse;">root@android</span>:
+        <span style="color: blue;">~/home$</span>
         {{message}}
     </p>
     <div *ngIf="isRunScript">
@@ -9,11 +14,11 @@
     </div>
     <p class="terminal-text" *ngIf="isStropScript">
         <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:
-        <span style="color: blue;">~/Documents/angular/marth-height$</span>
+        <span style="color: blue;">~/home$</span>
     </p>
     <p class="terminal-text" *ngIf="isStropScript">
         <span style="color:chartreuse;">AnyaKlepikova@google.com</span>:
-        <span style="color: blue;">~/Documents/angular/marth-height$</span>
+        <span style="color: blue;">~/home$</span>
         exit
     </p>
 </div>
